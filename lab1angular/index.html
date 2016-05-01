@@ -1,0 +1,45 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-example46-production</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="bower_components/bootstrap/dist/css/bootstrap.css"></script>
+    <script src="//use.edgefonts.net/droid-sans;noticia-text.js"></script>
+
+    <link rel="stylesheet" href="js/style.css">
+    <script src="js/script.js"></script>
+    <script src="js/controller.js"></script>
+
+
+</head>
+
+<body   ng-app="app" ng-controller="myCtrl">
+{{todos | json}}
+<div class="container">
+    <h3 style="text-align: center">Products list</h3>
+    <div>
+        <div class="panel panel-primary" ng-repeat="item in todos">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{item.name}}
+                    </div>
+                    <div class="col-sm-4">
+                        {{item.price}}
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-default">Add to cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
